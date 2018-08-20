@@ -24,6 +24,7 @@
     <article id="content">
       <img class="mobileMenuButton" src="../src/assets/logo.png" @click="showMobileMenu">
       <header id="handlers">
+        <Handle v-for="handle in handles" :key="handle" :title="handle"></Handle>
       </header>
       <router-view></router-view>
     </article>

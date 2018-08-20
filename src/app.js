@@ -1,10 +1,27 @@
+import Vue from 'vue'
 import { directive as onClickaway } from 'vue-clickaway'
+
+Vue.component('Handle', {
+  props: ['title'],
+  template: `
+    <router-link :id="getTitle" :to="getTitle" exact>
+      {{ title }}.php <i @click="close(getTitle, $event)"></i>
+    </router-link>
+  `,
+  computed: {
+    getTitle () { return this.title }
+  },
+  methods: {
+    close (route, event) { event.preventDefault(); this.$parent.removeHandle(route) }
+  }
+})
 
 export default {
   name: 'app',
   data () {
     return {
-      MobileMenuButton: 0
+      MobileMenuButton: 0,
+      handles: []
     }
   },
   directives: {
@@ -36,6 +53,22 @@ export default {
         fadeScrollbars: true,
         scrollX: true
       })
+    },
+    addHandle (router) {
+      this.iScroll()
+      if (this.handles.indexOf(router) === -1) { this.handles.push(router) }
+      var scrollTo = this.handles.indexOf(router) * 210 // 210 width of handle
+      document.querySelector('article#content header').animate({scrollLeft: scrollTo}, 100)
+    },
+    removeHandle (router) {
+      if (router) {
+        this.handles.splice(this.handles.indexOf(router), 1)
+        if (this.handles.length === 0) { this.$router.replace('/') } else {
+          if (this.$router.app.$route.path.substr(1) === router) {
+            this.$router.replace('/' + this.handles[0])
+          }
+        }
+      } else { this.handles = [] }
     }
   }
 }
@@ -52,8 +85,14 @@ function isPassive () {
   return supportsPassiveOption
 }
 
+var ignore = document.getElementById('handlers')
+function touchTriggred (event) {
+  var target = event.target
+  if (target === ignore || ignore.contains(target)) { } else { event.preventDefault() }
+}
+
 (function () {
-  document.addEventListener('touchmove', function (e) { e.preventDefault() }, isPassive() ? {
+  document.addEventListener('touchmove', touchTriggred, isPassive() ? {
     capture: false,
     passive: false
   } : false)
