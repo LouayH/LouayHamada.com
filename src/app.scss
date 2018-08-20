@@ -4,6 +4,9 @@
 @import '@/assets/styles/variables.scss';
 
 .noselect { -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+.iScrollVerticalScrollbar { position: absolute; z-index: 9999; width: 7px; bottom: 2px; top: 2px; right: 1px; overflow: hidden; }
+.iScrollHorizontalScrollbar { position: absolute; z-index: 9999; height: 7px; left: 2px; right: 2px; bottom: 2px; overflow: hidden; }
+.iScrollIndicator { box-sizing: border-box; position: absolute; background: rgba(207, 216, 220, 0.25); border: auto; border-radius: 3px; width: 100%; transition-duration: 0ms; display: block; height: 115px; transform: translate(0px, 0px) translateZ(0px); }
 
 html, body {
   margin: 0;
@@ -134,6 +137,49 @@ article#content header {
   width: 100%;
 }
 
+div#wrapper {
+	position: absolute;
+	top: 64px;
+	bottom: 0px;
+	width: inherit;
+	z-index: 1;
+	overflow: hidden;
+	font-family: Courier, monospace;
+}
+
+div#wrapper div#scroller {
+	margin: 0 10px 0 0;
+	position: absolute;
+	z-index: 1;
+	min-width: 1000px;
+	width: calc(100% - 10px);
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+	-webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	line-height: 25px;
+}
+
 /*-------------------------*/
 
 footer {
@@ -162,6 +208,9 @@ footer {
 	}
 	article#content {
 		width: calc(100vw - #{$aside-responsive} - 21px); //1 for aside border and 20 for content padding
+	}
+	div#scroller .lines .inherit-width {
+		width: calc(100vw - #{$aside-responsive} - 61px); //1 for aside border and 20 for content padding 40 for lines-number
 	}
 }
 
@@ -205,5 +254,8 @@ footer {
 	}
 	article#content header {
     width: calc(100% - 50px);
+  }
+	div#scroller .lines .inherit-width {
+		width: calc(100vw - 60px); //20 for content padding 40 for lines-number
 	}
 }

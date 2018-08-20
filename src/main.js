@@ -6,6 +6,9 @@ import App from './app.vue'
 import router from './router'
 import store from './store'
 
+import IScroll from 'iscroll'
+window.IScroll = IScroll
+
 Vue.config.productionTip = false
 
 Vue.use(Vuex)
