@@ -16,12 +16,32 @@ Vue.component('Handle', {
   }
 })
 
+let activeTab = (function () {
+  let stateKey
+  let eventKey
+  let keys = {
+    hidden: 'visibilitychange',
+    webkitHidden: 'webkitvisibilitychange',
+    mozHidden: 'mozvisibilitychange',
+    msHidden: 'msvisibilitychange'
+  }
+  for (stateKey in keys) {
+    if (stateKey in document) { eventKey = keys[stateKey]; break }
+  }
+  return function (c) {
+    if (c) { document.addEventListener(eventKey, c) }
+    return !document[stateKey]
+  }
+})()
+
 export default {
   name: 'app',
   data () {
     return {
       MobileMenuButton: 0,
-      handles: []
+      activeTab: activeTab,
+      handles: [],
+      typed: 0
     }
   },
   directives: {
@@ -53,6 +73,11 @@ export default {
         fadeScrollbars: true,
         scrollX: true
       })
+    },
+    resetHeight () {
+      document.querySelector('.lines').style.height = `${document.querySelector('#typed').clientHeight}px`
+      document.querySelector('.lines_number').style.height = `${document.querySelector('.lines').clientHeight}px`
+      window.myScroll.refresh()
     },
     addHandle (router) {
       this.iScroll()
