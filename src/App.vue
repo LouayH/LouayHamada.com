@@ -1,54 +1,34 @@
 <template>
-  <div id="app">
-    <header>
-      <span>Vue.js PWA</span>
-    </header>
-    <main>
-      <img src="./assets/logo.png" alt="Vue.js PWA">
+  <main id="app" class="noselect">
+    <aside v-on-clickaway="hideMobileMenu">
+      <header>
+        <img src="../src/assets/logo.png" alt="">
+        <h1>Louay Hamada</h1>
+        <br clear="all" />
+      </header>
+      <nav>
+        <ul>
+          <router-link tag="li" to="/about-me" exact @click.native="hideMobileMenu">
+            <a id="about-me"><i></i><span>About me</span></a>
+          </router-link>
+          <router-link tag="li" to="/portfolio" @click.native="hideMobileMenu">
+            <a id="portfolio"><i></i><span>Portfolio</span></a>
+          </router-link>
+          <router-link tag="li" to="/contact-me" @click.native="hideMobileMenu">
+            <a id="contact-me"><i></i><span>Contact me</span></a>
+          </router-link>
+        </ul>
+      </nav>
+      <footer>© {{ (new Date()).getFullYear() }}</footer>
+    </aside>
+    <article id="content">
+      <img class="mobileMenuButton" src="../src/assets/logo.png" @click="showMobileMenu">
+      <header id="handlers">
+      </header>
       <router-view></router-view>
-    </main>
-  </div>
+    </article>
+  </main>
 </template>
 
-<script>
-export default {
-  name: 'app'
-}
-</script>
-
-<style>
-body {
-  margin: 0;
-}
-
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-}
-
-main {
-  text-align: center;
-  margin-top: 40px;
-}
-
-header {
-  margin: 0;
-  height: 56px;
-  padding: 0 16px 0 24px;
-  background-color: #35495E;
-  color: #ffffff;
-}
-
-header span {
-  display: block;
-  position: relative;
-  font-size: 20px;
-  line-height: 1;
-  letter-spacing: .02em;
-  font-weight: 400;
-  box-sizing: border-box;
-  padding-top: 16px;
-}
-</style>
+<script src="./app.js"></script>
+<style src="./app.scss" lang="scss"></style>
