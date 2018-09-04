@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
-    "start": "node build/dev-server.js",
+    "start": "node express.js",
     "build": "node build/build.js",
     "lint": "eslint --ext .js,.vue src"
   },
@@ -15,6 +15,7 @@
     "cors": "^2.8.4",
     "express": "^4.16.3",
     "iscroll": "^5.2.0",
+    "nodemailer": "^4.6.8",
     "normalize-scss": "^7.0.1",
     "typed.js": "^2.0.9",
     "vue": "^2.5.2",
