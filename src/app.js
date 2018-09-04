@@ -75,7 +75,11 @@ export default {
       })
     },
     resetHeight () {
-      document.querySelector('.lines').style.height = `${document.querySelector('#typed').clientHeight}px`
+      if (document.querySelector('#typed')) {
+        document.querySelector('.lines').style.height = `${document.querySelector('#typed').clientHeight}px`
+      } else if (document.querySelector('#contact')) {
+        document.querySelector('.lines').style.height = `${document.querySelector('#contact').clientHeight}px`
+      }
       document.querySelector('.lines_number').style.height = `${document.querySelector('.lines').clientHeight}px`
       window.myScroll.refresh()
     },

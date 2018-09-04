@@ -67,8 +67,12 @@
           typeSpeed: 10,
           onComplete: function () {
             route.startTimer = 1
-            document.querySelector('#beforeTimer + .typed-cursor').remove()
-            document.querySelector('#afterTimer + .typed-cursor').style.visibility = 'visible'
+            if (document.querySelector('#beforeTimer + .typed-cursor')) {
+              document.querySelector('#beforeTimer + .typed-cursor').remove()
+            }
+            if (document.querySelector('#afterTimer + .typed-cursor')) {
+              document.querySelector('#afterTimer + .typed-cursor').style.visibility = 'visible'
+            }
             afterTimer.start()
           }
         })
