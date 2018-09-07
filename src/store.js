@@ -14,7 +14,8 @@ export default new Vuex.Store({
       budget: null,
       deadline: null,
       text: null
-    }
+    },
+    fold: {}
   },
   mutations: {
     content (state, payload) {
@@ -26,6 +27,9 @@ export default new Vuex.Store({
       } else {
         state.contactInfo[payload.prop] = payload.data
       }
+    },
+    fold (state, payload) {
+      Vue.set(state.fold, payload.prop, payload.data)
     }
   },
   actions: {
@@ -34,6 +38,9 @@ export default new Vuex.Store({
     },
     contactInfo ({commit}, payload) {
       commit('contactInfo', payload)
+    },
+    fold ({commit}, payload) {
+      commit('fold', payload)
     }
   },
   getters: {
@@ -42,6 +49,9 @@ export default new Vuex.Store({
     },
     contactInfo: state => {
       return state.contactInfo
+    },
+    fold: state => {
+      return state.fold
     }
   }
 })

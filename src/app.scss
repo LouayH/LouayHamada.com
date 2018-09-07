@@ -341,12 +341,17 @@ div#wrapper.no-handler div#scroller {
 
 .line {
 	display: block;
-	min-height: 24px;
-	line-height: 24px;
-	border-bottom: 1px $bg-color dashed;
+	min-height: 25px;
+	line-height: 25px;
   min-width: 1000px;
 
+  &.tab { margin-left: 19.2px; }
+  &.dtab { margin-left: 32.9px; }
+  &.ttab { margin-left: 57.6px; }
   &.multiline { min-height: 25px; border-bottom: 0px $bg-color dashed; }
+  & .selector { color: $selector-color; }
+  & .value { color: $value-color; }
+  & .comment { color: $comment-color; }
 
   &.error {
     &:before {
@@ -363,6 +368,23 @@ div#wrapper.no-handler div#scroller {
   &.error-message {
     color: $error-color;
   }
+}
+
+.fold {
+	display: none;
+}
+
+.toggleExpand {
+  cursor: pointer;
+	position: absolute;
+	left: 20px;
+  outline: none;
+  border: none;
+  width: 20px;
+  background: none;
+  text-align: center;
+  color: inherit;
+	font-size: 18px;
 }
 
 /** Contact me **/

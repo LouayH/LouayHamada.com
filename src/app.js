@@ -80,7 +80,9 @@ export default {
       } else if (document.querySelector('#contact')) {
         document.querySelector('.lines').style.height = `${document.querySelector('#contact').clientHeight}px`
       }
-      document.querySelector('.lines_number').style.height = `${document.querySelector('.lines').clientHeight}px`
+      if (document.querySelector('.lines_number')) {
+        document.querySelector('.lines_number').style.height = `${document.querySelector('.lines').clientHeight}px`
+      }
       window.myScroll.refresh()
     },
     addHandle (router) {
@@ -98,6 +100,72 @@ export default {
           }
         }
       } else { this.handles = [] }
+    },
+    toggleExpand (currentTarget, component) {
+      let button = currentTarget.querySelector('button')
+
+      if (button.innerHTML === '+') {
+        document.querySelectorAll('button.toggleExpand').forEach((element) => {
+          element.innerHTML = '+'
+        })
+        button.innerHTML = '-'
+
+        document.querySelectorAll('.fold').forEach((element) => {
+          element.style.display = 'none'
+        })
+
+        currentTarget.nextElementSibling.style.display = 'block'
+
+        document.querySelectorAll('.lines_number .line:not(.freeze)').forEach((element) => {
+          element.style.display = 'none'
+        })
+
+        document.querySelectorAll('.lines_number .line.' + button.id).forEach((element) => {
+          element.style.display = 'block'
+        })
+
+        this.$store.dispatch('fold', { prop: component, data: button.id })
+      } else {
+        button.innerHTML = '+'
+        currentTarget.nextElementSibling.style.display = 'none'
+
+        document.querySelectorAll('.lines_number .line.' + button.id).forEach((element, i) => {
+          element.style.display = 'none'
+
+          if (i === 0) {
+            element.style.display = 'block'
+          }
+        })
+        this.$store.dispatch('fold', { prop: component, data: '' })
+      }
+
+      window.myScroll.refresh()
+    },
+    expandNode (id) {
+      let button = document.querySelector('#' + id)
+      if (button.innerHTML === '+') {
+        document.querySelectorAll('button.toggleExpand').forEach((element) => {
+          element.innerHTML = '+'
+        })
+        button.innerHTML = '-'
+
+        document.querySelectorAll('.fold').forEach((element) => {
+          element.style.display = 'none'
+        })
+
+        button.parentElement.parentElement.nextElementSibling.style.display = 'block'
+
+        this.$nextTick(() => {
+          document.querySelectorAll('.lines_number .line:not(.freeze)').forEach((element) => {
+            element.style.display = 'none'
+          })
+
+          document.querySelectorAll('.lines_number .line.' + button.id).forEach((element) => {
+            element.style.display = 'block'
+          })
+          window.myScroll.refresh()
+        })
+      }
     }
   }
 }

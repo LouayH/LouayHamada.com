@@ -48,10 +48,12 @@
           strings: [timerStrings[1]],
           typeSpeed: 10,
           onComplete: function () {
-            document.querySelector('#beforeTimer > .timer').replaceWith('...')
-            document.querySelector('#typed > .timer').remove()
-            document.querySelector('#afterTimer > .timer').remove()
-            route.$store.dispatch('content', { prop: 'welcome', data: document.querySelector('#typed').innerHTML })
+            if (document.querySelector('#beforeTimer')) {
+              document.querySelector('#beforeTimer > .timer').replaceWith('...')
+              document.querySelector('#typed > .timer').remove()
+              document.querySelector('#afterTimer > .timer').remove()
+              route.$store.dispatch('content', { prop: 'welcome', data: document.querySelector('#typed').innerHTML })
+            }
             parent.typed = 1
             route.startTimer = 0
             parent.resetHeight()
