@@ -351,6 +351,7 @@ div#wrapper.no-handler div#scroller {
   &.multiline { min-height: 25px; border-bottom: 0px $bg-color dashed; }
   & .selector { color: $selector-color; }
   & .value { color: $value-color; }
+  & .value a, & .value a:hover { color: $value-color !important; text-decoration: underline; }
   & .comment { color: $comment-color; }
 
   &.error {
@@ -385,6 +386,30 @@ div#wrapper.no-handler div#scroller {
   text-align: center;
   color: inherit;
 	font-size: 18px;
+}
+
+.portfolio-gallery {
+  display: inline-block;
+}
+
+.portfolio-gallery img, .pswp__caption {
+  display: none;
+}
+
+.portfolio-gallery figure {
+  margin: 0;
+  display: inline-block;
+
+  & > a {
+    display: initial !important;
+  }
+}
+
+.portfolio-gallery figcaption {
+  cursor: pointer;
+  color: $value-color;
+  text-decoration: underline;
+  display: inline-block;
 }
 
 /** Contact me **/

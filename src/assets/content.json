@@ -11,7 +11,7 @@
       "Building Web Applications",
       "Corporate Websites",
       "Progressive Web Applications",
-      "Custom Wordpress Themes and Plugins",
+      "Custom WordPress Themes and Plugins",
       "Landing Pages",
       "Responsive Layouts",
       "Fix Problems and Speed Up Your Website"
@@ -43,5 +43,193 @@
         "Photoshop/Illustrator"
       ]
     }
-  }
+  },
+  "portfolio": [
+    {
+      "id": "coretabs",
+      "title": "Coretabs Academy",
+      "description": "Interactive E-Learning Platform - 2018",
+      "about": "Single Page Application",
+      "built": [
+        "Python",
+        "Django",
+        "HTML",
+        "CSS",
+        "Vue.js",
+        "Docker"
+      ],
+      "gallery": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg"
+      ],
+      "url": "coretabs.net"
+    },
+    {
+      "id": "inpackagin",
+      "title": "Packagin' You",
+      "description": "Branding Agency in Bahrain - 2017",
+      "about": "Portfolio, Blog and Multi-galleries WordPress Theme",
+      "built": [
+        "WordPress",
+        "HTML",
+        "CSS",
+        "PHP",
+        "MySQL",
+        "jQuery",
+        "AJAX"
+      ],
+      "gallery": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg"
+      ],
+      "url": "inpackagin.com"
+    },
+    {
+      "id": "LH",
+      "title": "Louay Hamada",
+      "description": "Personal Portfolio of a Full Stack Web Developer - 2017",
+      "about": "Laravel and Vue.js Application",
+      "built": [
+        "Laravel",
+        "Vue.js",
+        "HTML",
+        "CSS",
+        "PHP",
+        "MySQL",
+        "jQuery",
+        "axios"
+      ],
+      "gallery": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg"
+      ],
+      "url": "louayhamada.com"
+    },
+    {
+      "id": "Alamaat Arabiya",
+      "title": "Alamaat Arabiya",
+      "description": "A Magazine about the design industry - 2016",
+      "about": "WordPress Magazine Theme with ePayment Gate",
+      "built": [
+        "WordPress",
+        "HTML",
+        "CSS",
+        "PHP",
+        "MySQL",
+        "jQuery",
+        "AJAX"
+      ],
+      "gallery": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg"
+      ],
+      "url": "alamaatarabiya.com"
+    },
+    {
+      "id": "SASEM",
+      "title": "Saudi Society of Emergency Medicine",
+      "description": "Emergency Medicine News and Events in KSA - 2015",
+      "about": "WordPress Theme with Events Management Plugin ",
+      "built": [
+        "WordPress",
+        "HTML",
+        "CSS",
+        "PHP",
+        "MySQL",
+        "jQuery",
+        "AJAX"
+      ],
+      "gallery": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg"
+      ],
+      "url": "sasem.org"
+    },
+    {
+      "id": "Brandin You",
+      "title": "Brandin You",
+      "description": "Branding, Advertising & Publishing Company in Bahrain - 2014",
+      "about": "Portfolio & Blog PHP Script",
+      "built": [
+        "HTML",
+        "CSS",
+        "PHP",
+        "MySQL",
+        "jQuery",
+        "AJAX"
+      ],
+      "gallery": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg"
+      ],
+      "url": "brandin-you.com"
+    },
+    {
+      "id": "SCC-SY",
+      "title": "Syrian Company Center",
+      "description": "Direct Selling Leading Company in Syria - 2014",
+      "about": "eCommerce and Multi Level Marketing PHP Script",
+      "built": [
+        "HTML",
+        "CSS",
+        "PHP",
+        "MySQL",
+        "jQuery",
+        "AJAX"
+      ],
+      "gallery": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg"
+      ],
+      "url": "scc-sy.com"
+    },
+    {
+      "id": "JA",
+      "title": "Juventus Arabia",
+      "description": "Latest Juventus Football Club News in Arabic - 2013",
+      "about": "WordPress Multifunctional Theme",
+      "built": [
+        "WordPress",
+        "HTML",
+        "CSS",
+        "PHP",
+        "MySQL",
+        "jQuery",
+        "AJAX"
+      ],
+      "gallery": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg"
+      ],
+      "url": "juventusarabia.com"
+    },
+    {
+      "id": "B2B-SY",
+      "title": "Business 2 Business Syria",
+      "description": "Latest Syrian Economy and Stock Market News - 2012",
+      "about": "News Portal PHP Script",
+      "built": [
+        "HTML",
+        "CSS",
+        "PHP",
+        "MySQL",
+        "jQuery",
+        "AJAX"
+      ],
+      "gallery": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg"
+      ],
+      "url": "b2b-sy.com"
+    }
+  ]
 }

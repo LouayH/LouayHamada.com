@@ -19,6 +19,7 @@
     "iscroll": "^5.2.0",
     "nodemailer": "^4.6.8",
     "normalize-scss": "^7.0.1",
+    "photoswipe": "^4.1.2",
     "typed.js": "^2.0.9",
     "vue": "^2.5.2",
     "vue-clickaway": "^2.2.2",
