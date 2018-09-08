@@ -182,8 +182,8 @@ function isPassive () {
   return supportsPassiveOption
 }
 
-var ignore = document.getElementById('handlers')
 function touchTriggred (event) {
+  let ignore = document.getElementById('handlers')
   var target = event.target
   if (target === ignore || ignore.contains(target)) { } else { event.preventDefault() }
 }
