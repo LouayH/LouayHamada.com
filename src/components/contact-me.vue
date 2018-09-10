@@ -94,7 +94,7 @@
             }
           })
           .catch((error) => {
-            if (error.response.status === 400) {
+            if (error.status === 400) {
               Object.keys(error.response.data).forEach(function (key) { route.errors[key] = error.response.data[key] })
             } else {
               route.errors.form = 1

@@ -9,13 +9,13 @@
       <nav>
         <ul>
           <router-link tag="li" to="/about-me" exact @click.native="hideMobileMenu">
-            <a id="about-me"><i></i><span>About me</span></a>
+            <a id="about-me"><i></i><span>about-me</span></a>
           </router-link>
           <router-link tag="li" to="/portfolio" @click.native="hideMobileMenu">
-            <a id="portfolio"><i></i><span>Portfolio</span></a>
+            <a id="portfolio"><i></i><span>portfolio</span></a>
           </router-link>
           <router-link tag="li" to="/contact-me" @click.native="hideMobileMenu">
-            <a id="contact-me"><i></i><span>Contact me</span></a>
+            <a id="contact-me"><i></i><span>contact-me</span></a>
           </router-link>
         </ul>
       </nav>

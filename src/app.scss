@@ -262,9 +262,9 @@ div#wrapper div#scroller {
 }
 
 article#content #wrapper a {
-	white-space: nowrap;
+  display: inline;
 	color: $hover-color;
-  display: inline-block;
+  white-space: normal;
 }
 
 article#content #wrapper a i {

@@ -5,7 +5,7 @@ Vue.component('Handle', {
   props: ['title'],
   template: `
     <router-link :id="getTitle" :to="getTitle" exact>
-      {{ title }}.php <i @click="close(getTitle, $event)"></i>
+      {{ title }}.json <i @click="close(getTitle, $event)"></i>
     </router-link>
   `,
   computed: {

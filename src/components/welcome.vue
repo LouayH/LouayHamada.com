@@ -5,7 +5,7 @@
         <div v-for="line in 99" :key="line" class="line">{{ line }}</div>
       </div>
       <div class="lines">
-        <div id="typed">
+        <div id="typed" @click="checkRouter($event)">
           <span id="beforeTimer"></span>
           <span class="timer" v-if="startTimer"> {{ timer | toFixed }} </span>
           <span id="afterTimer"></span>
@@ -53,10 +53,10 @@
               document.querySelector('#typed > .timer').remove()
               document.querySelector('#afterTimer > .timer').remove()
               route.$store.dispatch('content', { prop: 'welcome', data: document.querySelector('#typed').innerHTML })
+              parent.typed = 1
+              route.startTimer = 0
+              parent.resetHeight()
             }
-            parent.typed = 1
-            route.startTimer = 0
-            parent.resetHeight()
           }
         })
         document.querySelector('#afterTimer + .typed-cursor').style.visibility = 'hidden'
@@ -90,6 +90,14 @@
     filters: {
       toFixed (timer) {
         return timer.toFixed(0)
+      }
+    },
+    methods: {
+      checkRouter (e) {
+        if (e.target.tagName === 'A' && e.target.getAttribute('router-link')) {
+          e.preventDefault()
+          this.$router.push(e.target.getAttribute('router-link'))
+        }
       }
     }
   }
