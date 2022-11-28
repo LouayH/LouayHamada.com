@@ -20,7 +20,7 @@
     data () {
       return {
         startTimer: 0,
-        timer: 31
+        timer: 33
       }
     },
     computed: {
