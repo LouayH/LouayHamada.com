@@ -170,21 +170,8 @@
       "title": "Alamaat Arabiya",
       "description": "A Magazine about the design industry - 2016",
       "about": "WordPress Magazine Theme with ePayment Gate",
-      "built": [
-        "WordPress",
-        "HTML",
-        "CSS",
-        "PHP",
-        "MySQL",
-        "jQuery",
-        "AJAX"
-      ],
-      "gallery": [
-        "1.jpg",
-        "2.jpg",
-        "3.jpg"
-      ],
-      "url": "alamaatarabiya.com"
+      "built": ["WordPress", "HTML", "CSS", "PHP", "MySQL", "jQuery", "AJAX"],
+      "gallery": ["1.jpg", "2.jpg", "3.jpg"]
     },
     {
       "id": "SASEM",
