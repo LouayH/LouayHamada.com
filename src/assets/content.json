@@ -44,6 +44,14 @@
   },
   "portfolio": [
     {
+      "id": "Austa",
+      "title": "Austa",
+      "description": "Mobile Application Landing Page - 2018",
+      "about": "Single Page Application",
+      "built": ["Node.js", "Next.js", "HTML", "CSS"],
+      "gallery": ["1.jpg", "2.jpg", "3.jpg"]
+    },
+    {
       "id": "coretabs",
       "title": "Coretabs Academy",
       "description": "Interactive E-Learning Platform - 2018",
