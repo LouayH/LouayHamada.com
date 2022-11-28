@@ -44,6 +44,24 @@
   },
   "portfolio": [
     {
+      "id": "Mrjan",
+      "title": "Mrjan",
+      "description": "Insurance Agency by Coretabs Team - 2020",
+      "about": "Portal, Single Page & Progressive Web Application",
+      "built": [
+        "HTML",
+        "CSS/SCSS",
+        "Vue.js",
+        "Python",
+        "Django",
+        "PostgreSQL",
+        "Docker",
+        "Nginx",
+        "CI/CD"
+      ],
+      "gallery": ["1.jpg"]
+    },
+    {
       "id": "Table 80",
       "title": "Table 80",
       "description": "Restaurants Reservations Progressive Web Application - 2019",
