@@ -44,6 +44,15 @@
   },
   "portfolio": [
     {
+      "id": "Bana Medical",
+      "title": "Bana Medical",
+      "description": "Medical Company Portfolio - 2020",
+      "about": "Single Page Application",
+      "built": ["HTML", "CSS/SCSS", "Next.js", "Node.js"],
+      "gallery": ["1.jpg", "2.jpg", "3.jpg"],
+      "url": "banamedical.com"
+    },
+    {
       "id": "GIF Flip",
       "title": "GIF Flip",
       "description": "GIF Browser using GIPHY Public API - 2020",
