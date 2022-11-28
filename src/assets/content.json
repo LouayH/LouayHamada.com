@@ -194,20 +194,8 @@
       "title": "Syrian Company Center",
       "description": "Direct Selling Leading Company in Syria - 2014",
       "about": "eCommerce and Multi Level Marketing PHP Script",
-      "built": [
-        "HTML",
-        "CSS",
-        "PHP",
-        "MySQL",
-        "jQuery",
-        "AJAX"
-      ],
-      "gallery": [
-        "1.jpg",
-        "2.jpg",
-        "3.jpg"
-      ],
-      "url": "scc-sy.com"
+      "built": ["HTML", "CSS", "PHP", "MySQL", "jQuery", "AJAX"],
+      "gallery": ["1.jpg", "2.jpg", "3.jpg"]
     },
     {
       "id": "JA",
