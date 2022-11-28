@@ -44,6 +44,15 @@
   },
   "portfolio": [
     {
+      "id": "Sweetat",
+      "title": "Sweetat",
+      "description": "Online Order System - 2021",
+      "about": "Single Page Application",
+      "built": ["HTML", "CSS/SCSS", "Next.js", "Laravel", "MySQL", "Nginx"],
+      "gallery": ["1.jpg", "2.jpg", "3.jpg"],
+      "url": "sweetat.co"
+    },
+    {
       "id": "Bana Medical",
       "title": "Bana Medical",
       "description": "Medical Company Portfolio - 2020",
