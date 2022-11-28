@@ -7,11 +7,11 @@
       <div class="lines">
         <span class="line"><span class="selector">[</span><span class="comment"> // Projects I worked on</span></span>
         <div v-for="(project, i) in content" :key="i">
-          <span class="line tab" @click="$parent.toggleExpand($event.currentTarget, 'portfolio')"><span class="selector">"</span><span class="value">{{ project.id }}</span><span class="selector">"</span>: <span class="selector">{<span v-if="fold.portfolio !== project.id.toLowerCase().replace(/\s/g, '')">...<span class="selector">}</span><span class="selector" v-if="i < Object.keys(content).length - 1">, </span></span><button :id="project.id.toLowerCase().replace(/\s/g, '')" class="toggleExpand">+</button></span></span>
+          <span class="line tab" @click="$parent.toggleExpand($event.currentTarget, 'portfolio')"><span class="selector">"</span><span class="value" :class="{deprecated: !project.url}">{{ project.id }}</span><span class="selector">"</span>: <span class="selector">{<span v-if="fold.portfolio !== project.id.toLowerCase().replace(/\s/g, '')">...<span class="selector">}</span><span class="selector" v-if="i < Object.keys(content).length - 1">, </span></span><button :id="project.id.toLowerCase().replace(/\s/g, '')" class="toggleExpand">+</button></span></span>
           <div class="fold">
             <span class="line dtab" v-for="(value, key, i) in project" :key="i" v-if="typeof value === 'string' && key != 'id'"><span class="selector">"</span>{{ key }}<span class="selector">"</span>: <span class="selector">"</span><span class="value"><a :href="'http://' + value" target="_blank" v-if="key === 'url'">{{ value }}</a><span v-else>{{ value }}</span></span><span class="selector">"</span><span class="selector">,</span></span>
-            <span class="line dtab" v-if="project.built.length-1 != 0"><span class="selector">"</span>built<span class="selector">"</span>: <span class="selector">["</span><span class="value" v-for="(skill, i) in project.built" :key="i">{{ skill }}<span class="selector" v-if="i < project.built.length-1">", "</span></span><span class="selector">"],</span></span>
-            <span class="line dtab" v-if="project.gallery.length-1 != 0"><span class="selector">"</span>gallery<span class="selector">"</span>: <!--
+            <span class="line dtab" v-if="project.built.length > 0"><span class="selector">"</span>built<span class="selector">"</span>: <span class="selector">["</span><span class="value" v-for="(skill, i) in project.built" :key="i">{{ skill }}<span class="selector" v-if="i < project.built.length-1">", "</span></span><span class="selector">"],</span></span>
+            <span class="line dtab" v-if="project.gallery && project.gallery.length > 0"><span class="selector">"</span>gallery<span class="selector">"</span>: <!--
               --><span class="selector">["</span><!--
               --><div class="portfolio-gallery" itemscope itemtype="http://schema.org/ImageGallery"><!--
               --><figure v-for="(img, i) in project.gallery" :key="i" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
@@ -215,8 +215,8 @@
         if (project.title) { route.lines.push(id) }
         if (project.description) { route.lines.push(id) }
         if (project.about) { route.lines.push(id) }
-        if (project.built.length - 1 !== 0) { route.lines.push(id) }
-        if (project.gallery.length - 1) { route.lines.push(id) }
+        if (project.built.length > 0) { route.lines.push(id) }
+        if (project.gallery && project.gallery.length > 0) { route.lines.push(id) }
         if (project.url) { route.lines.push(id) }
         route.lines.push(id) // EMPTY line
       })
