@@ -64,25 +64,13 @@
       "url": "coretabs.net"
     },
     {
-      "id": "inpackagin",
-      "title": "Packagin' You",
-      "description": "Branding Agency in Bahrain - 2017",
-      "about": "Portfolio, Blog and Multi-galleries WordPress Theme",
-      "built": [
-        "WordPress",
-        "HTML",
-        "CSS",
-        "PHP",
-        "MySQL",
-        "jQuery",
-        "AJAX"
-      ],
-      "gallery": [
-        "1.jpg",
-        "2.jpg",
-        "3.jpg"
-      ],
-      "url": "inpackagin.com"
+      "id": "Altattan Studio",
+      "title": "Altattan Studio",
+      "description": "Packaging Agency in Bahrain - 2017",
+      "about": "Blog and Portfolio WordPress Theme",
+      "built": ["WordPress", "HTML", "CSS", "PHP", "MySQL", "jQuery", "AJAX"],
+      "gallery": ["1.jpg", "2.jpg", "3.jpg"],
+      "url": "ahmedaltattan.com"
     },
     {
       "id": "LH",
