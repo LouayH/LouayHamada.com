@@ -48,7 +48,7 @@ server.post('/send', (req, res) => {
     })
 
     const mailOptions = {
-      from: `${contactInfo.name} <emailaddress@smtp.com>`,
+      from: `${contactInfo.name} <${contactInfo.email}>`,
       replyTo: contactInfo.email,
       to: 'emailaddress@smtp.com',
       subject: `[LH] ${contactInfo.subject}`,

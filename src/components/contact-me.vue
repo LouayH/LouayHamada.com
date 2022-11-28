@@ -85,7 +85,7 @@
         document.querySelector('.form-submit').disable = true
         Object.keys(route.errors).forEach(function (key) { route.errors[key] = null })
 
-        axios.post('http://localhost:3000/send', route.contactInfo)
+        axios.post('./send', route.contactInfo)
           .then((response) => {
             if (response.status === 200) {
               document.querySelector('form').remove()
