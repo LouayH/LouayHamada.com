@@ -129,23 +129,22 @@
       "gallery": ["1.jpg", "2.jpg", "3.jpg"]
     },
     {
-      "id": "coretabs",
+      "id": "Coretabs",
       "title": "Coretabs Academy",
       "description": "Interactive E-Learning Platform - 2018",
       "about": "Single Page Application",
       "built": [
-        "Python",
-        "Django",
         "HTML",
         "CSS",
         "Vue.js",
-        "Docker"
+        "Python",
+        "Django",
+        "PostgreSQL",
+        "Docker",
+        "Nginx",
+        "CI/CD"
       ],
-      "gallery": [
-        "1.jpg",
-        "2.jpg",
-        "3.jpg"
-      ],
+      "gallery": ["1.jpg", "2.jpg", "3.jpg"],
       "url": "coretabs.net"
     },
     {
