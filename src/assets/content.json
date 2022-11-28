@@ -161,18 +161,8 @@
       "title": "Louay Hamada",
       "description": "Personal Portfolio of a Full Stack Web Developer - 2017",
       "about": "Vue.js Single Page and Progressive Web Application",
-      "built": [
-        "Vue.js",
-        "HTML",
-        "CSS",
-        "jQuery",
-        "axios"
-      ],
-      "gallery": [
-        "1.jpg",
-        "2.jpg",
-        "3.jpg"
-      ],
+      "built": ["Vue.js", "HTML", "CSS", "jQuery", "axios"],
+      "gallery": ["1.jpg", "2.jpg", "3.jpg"],
       "url": "louayhamada.com"
     },
     {
