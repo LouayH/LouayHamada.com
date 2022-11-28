@@ -3,10 +3,11 @@
   "contact": "Please fill out the form below to enquire about hiring me or if you have any questions. Please introduce your project to get a quote based on your requirements. Specify a budget and an ideal completion date helps me give you the best solution. I'll get in touch with you as soon as possible and you should expect to hear from me within 24 hours or so.<br /><br />You can also find me on <a id='linkedin' href='https://www.linkedin.com/in/louayhamada/' target='_blank'><i></i> LinkedIn</a>, <a id='github' href='https://github.com/LouayH' target='_blank'><i></i> Github</a>, <a id='stack' href='https://stackoverflow.com/users/1398488/louay-hamada' target='_blank'><i></i> Stack Overflow</a>, <a id='twitter' href='https://twitter.com/LouayHamada' target='_blank'><i></i> Twitter</a> or <a id='telegram' href='https://t.me/LouayHamada' target='_blank'><i></i> Telegram.</a><br /><br />",
   "bio": {
     "name": "Louay Hamada",
-    "job": "Full Stack Web Application Developer",
+    "job": "Software Engineer",
     "from": "Damascus, Syria",
-    "live": "Erbil, Kurdistan Iraq",
+    "live": "Istanbul, Turkey",
     "degree": "Bachelor in Information Technology",
+    "about": "I will help you turning your idea into a business",
     "services": [
       "Building Web Applications",
       "Corporate Websites",
@@ -19,29 +20,26 @@
     "skills": {
       "frontend": [
         "HTML/HTML5",
-        "CSS/CSS3/SASS",
-        "JS/jQuery",
-        "Vue.js/Angular"
+        "CSS/CSS3/SCSS",
+        "JavaScript/ES6",
+        "TypeScript",
+        "jQuery/Vue.js/React.js",
+        "GraphQL",
+        "Ethers.js"
       ],
       "backend": [
         "PHP",
-        "Laravel",
+        "Laravel/Lumen",
         "WordPress",
         "Node.js",
         "Express",
         "Python",
-        "Django"
+        "Django",
+        "Solidity"
       ],
-      "database": [
-        "MySQL",
-        "MongoDB",
-        "PostgreSQL",
-        "XML/Sedna"
-      ],
-      "others": [
-        "Git",
-        "Photoshop/Illustrator"
-      ]
+      "database": ["MySQL", "MongoDB", "PostgreSQL"],
+      "DevOps": ["Linux Servers", "GIT", "CI/CD", "Docker", "Nginx"],
+      "others": ["XD", "Photoshop", "Illustrator"]
     }
   },
   "portfolio": [
