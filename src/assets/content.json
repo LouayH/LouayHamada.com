@@ -44,6 +44,14 @@
   },
   "portfolio": [
     {
+      "id": "KRYPTO",
+      "title": "KRYPTO",
+      "description": "Ethereum Transactions - 2022",
+      "about": "Web 3 Demo Project",
+      "built": ["HTML", "CSS/SCSS", "React", "Ethers.js", "Solidty"],
+      "url": "github.com/LouayH/krypto/"
+    },
+    {
       "id": "Sweetat",
       "title": "Sweetat",
       "description": "Online Order System - 2021",
