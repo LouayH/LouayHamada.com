@@ -210,19 +210,8 @@
       "title": "Business 2 Business Syria",
       "description": "Latest Syrian Economy and Stock Market News - 2012",
       "about": "News Portal PHP Script",
-      "built": [
-        "HTML",
-        "CSS",
-        "PHP",
-        "MySQL",
-        "jQuery",
-        "AJAX"
-      ],
-      "gallery": [
-        "1.jpg",
-        "2.jpg",
-        "3.jpg"
-      ],
+      "built": ["HTML", "CSS", "PHP", "MySQL", "jQuery", "AJAX"],
+      "gallery": ["1.jpg", "2.jpg", "3.jpg"],
       "url": "b2b-sy.com"
     }
   ]
