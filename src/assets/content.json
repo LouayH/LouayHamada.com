@@ -44,6 +44,23 @@
   },
   "portfolio": [
     {
+      "id": "GIF Flip",
+      "title": "GIF Flip",
+      "description": "GIF Browser using GIPHY Public API - 2020",
+      "about": "Showcase Project for DevOps Skills",
+      "built": [
+        "HTML",
+        "CSS/SCSS",
+        "Vue.js",
+        "PHP",
+        "Lumen",
+        "MySQL",
+        "Docker",
+        "CI/CD"
+      ],
+      "url": "github.com/LouayH/gif-flip/"
+    },
+    {
       "id": "Mrjan",
       "title": "Mrjan",
       "description": "Insurance Agency by Coretabs Team - 2020",
