@@ -44,6 +44,15 @@
   },
   "portfolio": [
     {
+      "id": "spm",
+      "title": "SPM® Solution",
+      "description": "Smart Performance Management Portal - 2023",
+      "about": "Single Page Application",
+      "built": ["HTML", "CSS/SCSS", "React"],
+      "gallery": ["1.jpg", "2.jpg", "3.jpg"],
+      "url": "spmconsultants.com/wp-content/uploads/2022/03/SPM-Digital-Solution-Brochure.pdf"
+    },
+    {
       "id": "KRYPTO",
       "title": "KRYPTO",
       "description": "Ethereum Transactions - 2022",
